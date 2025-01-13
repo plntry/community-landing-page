@@ -152,6 +152,19 @@ p {
   --heading-color: #f5f5f5;
 }
 
+/* Mobile Menu */
+.navbar__mobile-menu-items {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--body-bg-color);
+  opacity: 0.95;
+  padding: 3rem 2rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+}
+
 :root {
   /* Light Theme Colors */
   --primary-color: #8b5cf6;
@@ -181,4 +194,11 @@ p {
 
   /* Icons */
   --icon-color: var(--black);
+}
+
+/* Media Queries */
+@media(max-width: 768px) {
+  .navbar__menu {
+    display: none;
+  }
 }
