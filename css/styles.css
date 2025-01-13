@@ -9,10 +9,14 @@
 html,
 body {
   font-family: "Inter Tight", sans-serif;
-  background-color: var(--body-bg-color);
-  color: var(--text-color);
   line-height: 1.6;
   scroll-behavior: smooth;
+  letter-spacing: 0.02rem;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  color: var(--text-color);
 }
 
 a {
@@ -27,8 +31,154 @@ img {
   max-width: 100%;
 }
 
+svg {
+  width: 24px;
+  height: 24px;
+}
+
+path {
+  fill: var(--icon-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--heading-color);
+}
+
+h1 {
+  font-size: 80px;
+}
+
+h2 {
+  font-size: 48px;
+}
+
+h3 {
+  font-size: 38px;
+}
+
+h4 {
+  font-size: 28px;
+}
+
+p {
+  font-size: 20px;
+}
+
+/* Navbar */
+.navbar {
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.navbar__container {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar__logo img {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar__menu-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  font-weight: 500;
+}
+
+.navbar__menu-link {
+  color: var(--heading-color);
+  padding: 10px;
+}
+
+.navbar__menu-link:hover {
+  color: var(--primary-color);
+}
+
+.navbar__menu-link--primary {
+  background-color: var(--regular-btn-bg-color);
+  color: var(--btn-text-color);
+  padding: 10px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar__menu-link--primary:hover {
+  background-color: var(--btn-bg-hover-color);
+}
+
+.navbar__menu-link--light {
+  padding: 11px;
+  background-color: var(--light-btn-bg-color);
+  border: var(--light-btn-border);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.navbar__menu-link--light:hover {
+  background-color: var(--btn-bg-hover-color);
+}
+
+.navbar__menu-link--light:hover path {
+  fill: var(--btn-text-color);
+}
+
+.dark-theme {
+  /* Primary Color */
+  /* --primary-color: #8b5cf6; */
+
+  /* Body Colors */
+  --body-bg-color: var(--black);
+
+  /* Text Colors */
+  --text-color: #a3a3a3;
+  --heading-color: #f5f5f5;
+}
+
 :root {
+  /* Light Theme Colors */
   --primary-color: #8b5cf6;
-  --body-bg-color: #FFFFFF;
+  --primary-color-dark: #7850d4;
+  --black: #171717;
+  --white: #ffffff;
+
+  /* Body Colors */
+  --body-bg-color: #ffffff;
+
+  /* Text Colors */
   --text-color: #737373;
+  --heading-color: var(--black);
+
+  /* Button Colors */
+  --btn-text-color: var(--white);
+  --btn-bg-hover-color: var(--primary-color-dark);
+
+  /* Button Colors (Regular) */
+  --regular-btn-bg-color: var(--primary-color);
+
+  /* Button Colors (Light) */
+  --light-btn-bg-color: var(--white);
+  --light-btn-text-color: var(--black);
+  --light-btn-bg-hover-color: var(--primary-color-dark);
+  --light-btn-border: 1px solid #e5e5e5;
+
+  /* Icons */
+  --icon-color: var(--black);
 }
