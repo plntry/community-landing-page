@@ -17,6 +17,7 @@ body {
 body {
   background-color: var(--body-bg-color);
   color: var(--text-color);
+  transition: all 0.3 ease;
 }
 
 a {
@@ -48,44 +49,51 @@ h4 {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: var(--h1-font-size);
 }
 
 h2 {
-  font-size: 48px;
+  font-size: var(--h2-font-size);
 }
 
 h3 {
-  font-size: 38px;
+  font-size: var(--h3-font-size);
 }
 
 h4 {
-  font-size: 28px;
+  font-size: var(--h4-font-size);
 }
 
 p {
-  font-size: 20px;
+  font-size: var(--p-font-size);
 }
 
 /* Utility Classes */
+.container {
+  max-width: 1488px;
+  margin: 0 auto;
+  /* background-color: pink; */
+}
 
 /* Button */
 .button {
-  color: var(--heading-color);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  color: var(--btn-text-dark-color);
   padding: 10px;
   border-radius: 8px;
   font-size: 16px;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
 }
 
-.button:hover {
-  background-color: var(--btn-bg-hover-color);
-  transition: background-color 0.3s ease;
+.button:has(path):hover path {
+  fill: var(--btn-text-light-color);
 }
 
 .button--primary {
   background-color: var(--regular-btn-bg-color);
-  color: var(--btn-text-color);
+  color: var(--btn-text-light-color);
   padding: 12px 24px;
 }
 
@@ -98,16 +106,10 @@ p {
   background-color: var(--light-btn-bg-color);
   border: var(--light-btn-border);
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
 }
 
 .button--light:hover {
   background-color: var(--btn-bg-hover-color);
-}
-
-.button--light:has(path):hover path {
-  fill: var(--btn-text-color);
 }
 
 /* Navbar */
@@ -120,6 +122,11 @@ p {
   z-index: 1000;
   background-color: transparent;
   transition: background-color 0.3s ease-in-out;
+}
+
+.navbar.navbar--scroll {
+  background-color: var(--navbar-bg-scroll-color);
+  backdrop-filter: blur(10px);
 }
 
 .navbar__container {
@@ -166,7 +173,7 @@ p {
 
 .navbar__menu-link:hover,
 .navbar__mobile-menu-link:hover {
-  color: var(--primary-color);
+  color: var(--primary-color-dark);
 }
 
 .navbar__menu-link::after {
@@ -194,7 +201,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   /* background-color: yellow; */
 }
 
@@ -231,9 +238,56 @@ p {
   font-size: 1.2rem;
 }
 
+/* Hero */
+.hero {
+  padding: 11.5rem 2rem 8rem;
+}
+
+.hero__content {
+  max-width: 787px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  line-height: 1.2;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.hero__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+}
+
+.hero__button:first-of-type {
+  padding: 14px 32px;
+}
+
+.hero__button:last-of-type {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.hero__button:last-of-type i {
+  transition: transform 0.3s ease;
+}
+
+.hero__button:last-of-type:hover i {
+  transform: translateX(5px);
+}
 
 /* Dark Theme */
-.dark-theme {
+.body--theme-dark {
   /* Primary Color */
   /* --primary-color: #8b5cf6; */
 
@@ -260,7 +314,8 @@ p {
   --heading-color: var(--black);
 
   /* Button Colors */
-  --btn-text-color: var(--white);
+  --btn-text-light-color: var(--white);
+  --btn-text-dark-color: var(--black);
   --btn-bg-hover-color: var(--primary-color-dark);
 
   /* Button Colors (Regular) */
@@ -268,13 +323,22 @@ p {
 
   /* Button Colors (Light) */
   --light-btn-bg-color: var(--white);
-  --light-btn-text-color: var(--black);
   --light-btn-bg-hover-color: var(--primary-color-dark);
   --light-btn-border: 1px solid #e5e5e5;
+
+  /* Scroll Colors */
+  --navbar-bg-scroll-color: rgb(255, 255, 255, 0.8);
 
   /* Icons */
   --icon-color: var(--black);
   --icon-hover-color: var(--white);
+
+  /* Font Sizes */
+  --h1-font-size: 80px;
+  --h2-font-size: 48px;
+  --h3-font-size: 38px;
+  --h4-font-size: 28px;
+  --p-font-size: 20px;
 }
 
 /* Media Queries */
@@ -286,7 +350,19 @@ p {
 }
 
 @media (max-width: 768px) {
+  :root {
+    /* Font Sizes */
+    --h1-font-size: 38px;
+    --h2-font-size: 30px;
+    --h3-font-size: 28px;
+    --h4-font-size: 24px;
+  }
+
   /* Navbar */
+  .navbar {
+    padding: 2.5rem 15px;
+  }
+
   .navbar__menu {
     display: none;
   }
@@ -294,5 +370,10 @@ p {
   /* Mobile Menu */
   .navbar__mobile-menu {
     display: block;
+  }
+
+  /* Hero */
+  .hero {
+    padding: 11.5rem 15px 8rem;
   }
 }
