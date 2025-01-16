@@ -289,6 +289,7 @@ p {
 /* Features */
 .features {
   color: var(--text-light-color);
+  padding: 8rem 0;
 }
 
 .features__container {
@@ -310,7 +311,6 @@ p {
 .features__card-icon {
   line-height: 60px;
   padding: 10px;
-  /* background-color: pink; */
 }
 
 .features__card-icon path {
