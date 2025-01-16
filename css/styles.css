@@ -338,6 +338,32 @@ p {
   line-height: 1.2;
 }
 
+/* Feedback */
+.feedback__container {
+  background-image: url(../images/feedback-bg.png);
+  /* background-repeat: no-repeat; */
+  background-size: cover;
+  background-position: center center;
+  padding: 165px 15px;
+  display: flex;
+  justify-content: center;
+}
+
+.feedback__content {
+  text-align: center;
+  max-width: 1080px;
+}
+
+.feedback__title {
+  color: var(--text-light-color);
+}
+
+.feedback__description {
+  font-size: 38px;
+  line-height: 1.2;
+  color: var(--text-light-color);
+}
+
 /* Dark Theme */
 .body--theme-dark {
   /* Primary Color */
@@ -416,6 +442,11 @@ p {
   .features__container {
     width: auto;
   }
+
+  /* Feedback */
+  .feedback__content {
+    max-width: 830px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -469,5 +500,14 @@ p {
 
   .features__card-description {
     font-size: 20px;
+  }
+
+  /* Feedback */
+  .feedback__content {
+    max-width: auto;
+  }
+
+  .feedback__description {
+    font-size: 24px;
   }
 }
