@@ -30,7 +30,9 @@
         <div class="navbar__menu">
           <ul class="navbar__menu-list">
             <li class="navbar__menu-item">
-              <a href="#home" class="navbar__menu-link navbar__menu-link--active"
+              <a
+                href="#home"
+                class="navbar__menu-link navbar__menu-link--active"
                 >Home</a
               >
             </li>
@@ -120,7 +122,9 @@
                 <a href="#home" class="navbar__mobile-menu-link">Home</a>
               </li>
               <li class="navbar__mobile-menu-item">
-                <a href="#about-us" class="navbar__mobile-menu-link">About Us</a>
+                <a href="#about-us" class="navbar__mobile-menu-link"
+                  >About Us</a
+                >
               </li>
               <li class="navbar__mobile-menu-item">
                 <a href="#courses" class="navbar__mobile-menu-link">Courses</a>
@@ -129,7 +133,9 @@
                 <a href="#faq" class="navbar__mobile-menu-link">FAQ</a>
               </li>
               <li class="navbar__mobile-menu-item">
-                <a href="#contact-us" class="button button--primary">Contact Us</a>
+                <a href="#contact-us" class="button button--primary"
+                  >Contact Us</a
+                >
               </li>
             </ul>
           </div>
@@ -137,29 +143,137 @@
       </div>
     </navbar>
 
-    <!-- Hero -->
-    <header class="hero">
-      <div class="hero__container container">
-        <div class="hero__content">
-          <h1 class="hero__title">
-            Where the joy of learn meets the power of community
-          </h1>
-          <p class="hero__description">
-            Dive deep in immersive, interactive small groups. Expand horizons,
-            engage in discussions, and elevate your learning journey with us.
-          </p>
-          <div class="hero__buttons">
-            <a href="#travel" class="hero__button button button--primary"
-              >Start your travel</a
-            >
-            <a href="#video" class="hero__button button"
-              >Watch video
-              <i class="fa-solid fa-arrow-right"></i>
-            </a>
+    <main>
+      <!-- Hero -->
+      <header class="hero">
+        <div class="hero__container container">
+          <div class="hero__content">
+            <h1 class="hero__title">
+              Where the joy of learn meets the power of community
+            </h1>
+            <p class="hero__description">
+              Dive deep in immersive, interactive small groups. Expand horizons,
+              engage in discussions, and elevate your learning journey with us.
+            </p>
+            <div class="hero__buttons">
+              <a href="#travel" class="hero__button button button--primary"
+                >Start your travel</a
+              >
+              <a href="#video" class="hero__button button"
+                >Watch video
+                <i class="fa-solid fa-arrow-right"></i>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <!-- Features -->
+      <section class="features" id="features">
+        <div class="features__container container">
+          <div class="features__card">
+            <div class="features__card-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M16.2049 3.35998L10.7332 2.49665C6.17158 1.78498 4.05991 3.32498 3.33658 7.88665L2.47324 13.3583C2.00658 16.345 2.49658 18.2816 4.18824 19.46C5.07491 20.09 6.28824 20.51 7.86324 20.755L13.3349 21.6183C17.8966 22.33 20.0082 20.79 20.7316 16.2283L21.5832 10.7566C21.7232 9.85831 21.7816 9.05332 21.7349 8.34165C21.5832 5.42498 19.8682 3.93165 16.2049 3.35998ZM9.61324 10.9083C8.24824 10.9083 7.13991 9.79998 7.13991 8.44665C7.13991 7.08165 8.24824 5.97331 9.61324 5.97331C10.9666 5.97331 12.0749 7.08165 12.0749 8.44665C12.0749 9.79998 10.9666 10.9083 9.61324 10.9083Z"
+                />
+                <path
+                  d="M23.9166 15.715L22.1666 20.9767C20.7083 25.3633 18.3749 26.53 13.9882 25.0717L8.72658 23.3217C7.08158 22.7733 5.89158 22.0967 5.12158 21.245C5.85658 21.5367 6.70825 21.7583 7.67658 21.91L13.1599 22.7733C13.9066 22.89 14.6066 22.9483 15.2599 22.9483C19.1099 22.9483 21.1749 20.8717 21.8866 16.4033L22.7383 10.9317C22.8549 10.255 22.9016 9.66 22.9016 9.11166C24.6749 10.57 24.9316 12.6467 23.9166 15.715Z"
+                />
+              </svg>
+            </div>
+            <div class="features__card-content">
+              <h3 class="features__card-title">Explore topics</h3>
+              <p class="features__card-description">
+                Explore our selection of courses in development
+              </p>
+            </div>
+          </div>
+          <div class="features__card">
+            <div class="features__card-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.4517 9.06501C20.37 9.05334 20.2884 9.05334 20.2067 9.06501C18.3984 9.00668 16.9634 7.52501 16.9634 5.70501C16.9634 3.85001 18.4684 2.33334 20.335 2.33334C22.19 2.33334 23.7067 3.83834 23.7067 5.70501C23.695 7.52501 22.26 9.00668 20.4517 9.06501Z"
+                  fill="#8B5CF6"
+                />
+                <path
+                  d="M24.255 17.15C22.9484 18.025 21.1167 18.3517 19.425 18.13C19.8684 17.1733 20.1017 16.1117 20.1134 14.9917C20.1134 13.825 19.8567 12.7167 19.3667 11.7483C21.0934 11.515 22.925 11.8417 24.2434 12.7167C26.0867 13.93 26.0867 15.925 24.255 17.15Z"
+                  fill="#8B5CF6"
+                />
+                <path
+                  d="M7.51335 9.06501C7.59502 9.05334 7.67669 9.05334 7.75835 9.06501C9.56669 9.00668 11.0017 7.52501 11.0017 5.70501C11.0017 3.83834 9.49669 2.33334 7.63002 2.33334C5.77502 2.33334 4.27002 3.83834 4.27002 5.70501C4.27002 7.52501 5.70502 9.00668 7.51335 9.06501Z"
+                  fill="#8B5CF6"
+                />
+                <path
+                  d="M7.64168 14.9917C7.64168 16.1234 7.88668 17.1967 8.33002 18.165C6.68501 18.34 4.97002 17.99 3.71001 17.1617C1.86668 15.9367 1.86668 13.9417 3.71001 12.7167C4.95835 11.8767 6.72002 11.5384 8.37668 11.725C7.89835 12.705 7.64168 13.8134 7.64168 14.9917Z"
+                  fill="#8B5CF6"
+                />
+                <path
+                  d="M14.1401 18.515C14.0468 18.5033 13.9418 18.5033 13.8368 18.515C11.6901 18.445 9.9751 16.6833 9.9751 14.5133C9.98676 12.2967 11.7718 10.5 14.0001 10.5C16.2168 10.5 18.0134 12.2967 18.0134 14.5133C18.0018 16.6833 16.2984 18.445 14.1401 18.515Z"
+                  fill="#8B5CF6"
+                />
+                <path
+                  d="M10.3483 20.93C8.58668 22.1084 8.58668 24.045 10.3483 25.2117C12.355 26.5534 15.645 26.5534 17.6517 25.2117C19.4134 24.0334 19.4134 22.0967 17.6517 20.93C15.6567 19.5884 12.3667 19.5884 10.3483 20.93Z"
+                  fill="#8B5CF6"
+                />
+              </svg>
+            </div>
+            <div class="features__card-content">
+              <h3 class="features__card-title">Meet new friends</h3>
+              <p class="features__card-description">
+                Join the network with million of students and learn
+              </p>
+            </div>
+          </div>
+          <div class="features__card">
+            <div class="features__card-icon">
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 28 28"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.4517 9.06501C20.37 9.05334 20.2884 9.05334 20.2067 9.06501C18.3984 9.00668 16.9634 7.52501 16.9634 5.70501C16.9634 3.85001 18.4684 2.33334 20.335 2.33334C22.19 2.33334 23.7067 3.83834 23.7067 5.70501C23.695 7.52501 22.26 9.00668 20.4517 9.06501Z"
+                />
+                <path
+                  d="M24.255 17.15C22.9484 18.025 21.1167 18.3517 19.425 18.13C19.8684 17.1733 20.1017 16.1117 20.1134 14.9917C20.1134 13.825 19.8567 12.7167 19.3667 11.7483C21.0934 11.515 22.925 11.8417 24.2434 12.7167C26.0867 13.93 26.0867 15.925 24.255 17.15Z"
+                />
+                <path
+                  d="M7.51335 9.06501C7.59502 9.05334 7.67669 9.05334 7.75835 9.06501C9.56669 9.00668 11.0017 7.52501 11.0017 5.70501C11.0017 3.83834 9.49669 2.33334 7.63002 2.33334C5.77502 2.33334 4.27002 3.83834 4.27002 5.70501C4.27002 7.52501 5.70502 9.00668 7.51335 9.06501Z"
+                />
+                <path
+                  d="M7.64168 14.9917C7.64168 16.1234 7.88668 17.1967 8.33002 18.165C6.68501 18.34 4.97002 17.99 3.71001 17.1617C1.86668 15.9367 1.86668 13.9417 3.71001 12.7167C4.95835 11.8767 6.72002 11.5384 8.37668 11.725C7.89835 12.705 7.64168 13.8134 7.64168 14.9917Z"
+                />
+                <path
+                  d="M14.1401 18.515C14.0468 18.5033 13.9418 18.5033 13.8368 18.515C11.6901 18.445 9.9751 16.6833 9.9751 14.5133C9.98676 12.2967 11.7718 10.5 14.0001 10.5C16.2168 10.5 18.0134 12.2967 18.0134 14.5133C18.0018 16.6833 16.2984 18.445 14.1401 18.515Z"
+                />
+                <path
+                  d="M10.3483 20.93C8.58668 22.1084 8.58668 24.045 10.3483 25.2117C12.355 26.5534 15.645 26.5534 17.6517 25.2117C19.4134 24.0334 19.4134 22.0967 17.6517 20.93C15.6567 19.5884 12.3667 19.5884 10.3483 20.93Z"
+                />
+              </svg>
+            </div>
+            <div class="features__card-content">
+              <h3 class="features__card-title">Learn code</h3>
+              <p class="features__card-description">
+                Learn all about code and become in a developer
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <script src="js/script.js"></script>
   </body>
