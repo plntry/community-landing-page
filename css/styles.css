@@ -460,7 +460,6 @@ main {
 /* Feedback */
 .feedback__container {
   background-image: url(../images/feedback-bg.png);
-  /* background-repeat: no-repeat; */
   background-size: cover;
   background-position: center center;
   padding: 165px 15px;
@@ -481,6 +480,38 @@ main {
   font-size: 38px;
   line-height: 1.2;
   color: var(--text-light-color);
+}
+
+/* Possibilities */
+.possibilities__container {
+  background: #f5f5f5;
+  padding: 160px 120px;
+}
+
+.possibilities__list {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+}
+
+.possibilities__list-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.possibilities__list-image img {
+  width: 500px;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+}
+
+.possibilities__list-text {
+  max-width: 671px;
+}
+
+.possibilities__list-description {
+  font-size: 30px;
 }
 
 /* Dark Theme */
@@ -571,6 +602,16 @@ main {
 
   .courses__cards {
     justify-content: space-evenly;
+  }
+
+  /* Possibilities */
+  .possibilities__container {
+    padding: 128px 80px;
+  }
+
+  .possibilities__list-item {
+    flex-direction: column;
+    text-align: center;
   }
 }
 
@@ -668,5 +709,22 @@ main {
 
   .feedback__description {
     font-size: 24px;
+  }
+
+  /* Possibilities */
+  .possibilities__container {
+    padding: 128px 15px;
+  }
+
+  .possibilities__list-image img {
+    width: 401px;
+  }
+
+  .possibilities__list-text {
+    max-width: 671px;
+  }
+
+  .possibilities__list-description {
+    font-size: 20px;
   }
 }
