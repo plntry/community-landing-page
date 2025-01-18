@@ -445,9 +445,14 @@ main {
   align-items: center;
 }
 
-.courses__card-timer {
+.courses__card-duration svg {
   width: 17px;
   height: 17px;
+}
+
+.courses__card-duration path {
+  fill: none;
+  stroke: var(--courses-timer-color);
 }
 
 .courses__card-duration p {
@@ -638,6 +643,7 @@ main {
   --course-card-bg-color: var(--darker-gray);
   --course-card-border: 1px solid var(--gray);
   --courses-duration-color: var(--text-light-color);
+  --courses-timer-color: var(--white);
 
   /* Possibilities Colors */
   --possibilities-bg-color: var(--darker-gray);
@@ -691,6 +697,7 @@ main {
   --course-card-bg-color: var(--white);
   --course-card-border: 1px solid #e5e5e5;
   --courses-duration-color: var(--text-dark-color);
+  --courses-timer-color: #a3a3a3;
 
   /* Card Badge Colors */
   --marketing-badge-color: rgb(219, 112, 12);
