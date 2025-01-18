@@ -12,6 +12,7 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   letter-spacing: 0.02rem;
+  transition: all 0.3s ease;
 }
 
 body {
@@ -99,8 +100,8 @@ main {
 }
 
 .button--primary {
-  background-color: var(--regular-btn-bg-color);
-  color: var(--text-light-color);
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
   padding: 12px 24px;
 }
 
@@ -148,15 +149,16 @@ main {
   gap: 6px;
 }
 
-.navbar__logo img {
-  width: 30px;
-  height: 30px;
+.navbar__logo path,
+.footer__logo path {
+  fill: var(--icon-color);
 }
 
-.navbar__logo span {
+.navbar__logo span,
+.footer__logo span {
   font-weight: 700;
   font-size: 23px;
-  color: #262626;
+  color: var(--text-logo-color);
 }
 
 .navbar__menu-list {
@@ -307,7 +309,7 @@ main {
   padding: 3rem 74px 3rem 3rem;
   display: flex;
   gap: 10px;
-  background-color: var(--black);
+  background-color: var(--feature-card-bg-color);
   border-radius: 10px;
 }
 
@@ -319,11 +321,11 @@ main {
 .features__card-icon path {
   width: 28px;
   height: 28px;
-  fill: var(--primary-color);
+  fill: #8b5cf6;
 }
 
 .features__card-icon:hover path {
-  fill: var(--primary-color-dark);
+  fill: #7850d4;
 }
 
 .features__card-content {
@@ -366,8 +368,8 @@ main {
   padding: 16px;
   gap: 20px;
   width: 356px;
-  background: #ffffff;
-  border: 1px solid #e5e5e5;
+  background: var(--course-card-bg-color);
+  border: var(--course-card-border);
   border-radius: 16px;
 }
 
@@ -392,10 +394,16 @@ main {
   color: var(--text-light-color);
   font-size: 14px;
   letter-spacing: 0.02em;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.courses__card-badge:hover {
+  filter: brightness(85%);
 }
 
 .courses__card-badge--development {
-  background-color: var(--dev-badge-color);
+  background-color: var(--primary-color);
 }
 
 .courses__card-badge--marketing {
@@ -418,7 +426,6 @@ main {
 
 .courses__card-title {
   font-size: 24px;
-  color: var(--text-dark-color);
   font-weight: 600;
   line-height: 32px;
 }
@@ -440,7 +447,7 @@ main {
 
 .courses__card-duration p {
   font-size: 14px;
-  color: var(--text-dark-color);
+  color: var(--courses-duration-color);
 }
 
 .courses__card-duration p b {
@@ -485,7 +492,7 @@ main {
 
 /* Possibilities */
 .possibilities__container {
-  background: #f5f5f5;
+  background: var(--possibilities-bg-color);
   padding: 160px 120px;
 }
 
@@ -526,7 +533,7 @@ main {
   justify-content: start;
 }
 
-.footer__logo img {
+.footer__logo svg {
   width: 43px;
   height: 43px;
 }
@@ -534,7 +541,6 @@ main {
 .footer__logo span {
   font-weight: 700;
   font-size: 32px;
-  color: #262626;
 }
 
 .footer__socials {
@@ -554,13 +560,18 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #e5e5e5;
+  border: var(--light-btn-border);
   border-radius: 10px;
   cursor: pointer;
 }
 
 .footer__social-link i {
-  color: #a3a3a3;
+  color: var(--footer-social-link-color);
+  transition: all 0.3s ease;
+}
+
+.footer__social-link:hover i {
+  color: #8a8a8a;
 }
 
 .footer__columns {
@@ -575,9 +586,6 @@ main {
   gap: 40px;
 }
 
-.footer__column-title {
-}
-
 .footer__links {
   display: flex;
   flex-direction: column;
@@ -587,62 +595,109 @@ main {
 .footer__link {
   font-weight: 400;
   font-size: 24px;
-  color: var(--text-dark-color);
+  color: var(--footer-link-color);
   cursor: pointer;
 }
 
 /* Dark Theme */
 .body--theme-dark {
-  /* Primary Color */
-  /* --primary-color: #8b5cf6; */
+  /* Primary Colors */
+  --primary-color: #ddd6fe;
+  --primary-color-dark: #b9b2d8;
+  --primary-text-color: #4c1d95;
 
   /* Body Colors */
   --body-bg-color: var(--black);
 
+  /* Scroll Colors */
+  --navbar-bg-scroll-color: rgb(23, 23, 23, 0.8);
+
   /* Text Colors */
   --text-color: #a3a3a3;
   --heading-color: #f5f5f5;
-}
-
-:root {
-  /* Light Theme Colors */
-  --primary-color: #8b5cf6;
-  --primary-color-dark: #7850d4;
-  --black: #171717;
-  --white: #ffffff;
-
-  /* Body Colors */
-  --body-bg-color: #ffffff;
-
-  /* Text Colors */
-  --text-light-color: var(--white);
-  --text-dark-color: var(--black);
-  --text-color: #737373;
-  --heading-color: var(--black);
+  --text-logo-color: var(--white);
 
   /* Button Colors */
   --btn-bg-hover-color: var(--primary-color-dark);
 
-  /* Button Colors (Regular) */
-  --regular-btn-bg-color: var(--primary-color);
+  /* Button Colors (Light) */
+  --light-btn-bg-color: var(--darker-gray);
+  --light-btn-bg-hover-color: var(--primary-color-dark);
+  --light-btn-border: 1px solid var(--gray);
+
+  /* Icons */
+  --icon-color: var(--white);
+  --icon-hover-color: var(--black);
+
+  /* Courses Colors */
+  --course-card-bg-color: var(--darker-gray);
+  --course-card-border: 1px solid var(--gray);
+  --courses-duration-color: var(--text-light-color);
+
+  /* Possibilities Colors */
+  --possibilities-bg-color: var(--darker-gray);
+
+  /* Footer Colors */
+  --footer-link-color: var(--text-light-color);
+  --footer-social-link-color: var(--white);
+}
+
+:root {
+  /* Main Colors */
+  --black: #171717;
+  --white: #ffffff;
+  --gray: #737373;
+  --darker-gray: #262626;
+
+  /* Primary Colors */
+  --primary-color: #8b5cf6;
+  --primary-color-dark: #7850d4;
+  --primary-text-color: var(--white);
+
+  /* Body Colors */
+  --body-bg-color: var(--white);
+
+  /* Scroll Colors */
+  --navbar-bg-scroll-color: rgb(255, 255, 255, 0.8);
+
+  /* Text Colors */
+  --text-light-color: var(--white);
+  --text-dark-color: var(--black);
+  --text-color: var(--gray);
+  --heading-color: var(--black);
+  --text-logo-color: var(--darker-gray);
+
+  /* Button Colors */
+  --btn-bg-hover-color: var(--primary-color-dark);
 
   /* Button Colors (Light) */
   --light-btn-bg-color: var(--white);
   --light-btn-bg-hover-color: var(--primary-color-dark);
   --light-btn-border: 1px solid #e5e5e5;
 
-  /* Scroll Colors */
-  --navbar-bg-scroll-color: rgb(255, 255, 255, 0.8);
+  /* Icons */
+  --icon-color: var(--black);
+  --icon-hover-color: var(--white);
+
+  /* Feature Colors */
+  --feature-card-bg-color: #000000;
+
+  /* Courses Colors */
+  --course-card-bg-color: var(--white);
+  --course-card-border: 1px solid #e5e5e5;
+  --courses-duration-color: var(--text-dark-color);
 
   /* Card Badge Colors */
-  --dev-badge-color: var(--primary-color);
   --marketing-badge-color: rgb(219, 112, 12);
   --design-badge-color: rgb(45, 65, 180);
   --editing-badge-color: rgb(28, 119, 28);
 
-  /* Icons */
-  --icon-color: var(--black);
-  --icon-hover-color: var(--white);
+  /* Possibilities Colors */
+  --possibilities-bg-color: #f5f5f5;
+
+  /* Footer Colors */
+  --footer-link-color: var(--text-dark-color);
+  --footer-social-link-color: #a3a3a3;
 
   /* Font Sizes */
   --h1-font-size: 80px;
