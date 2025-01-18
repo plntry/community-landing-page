@@ -21,6 +21,11 @@ body {
   transition: all 0.3 ease;
 }
 
+::selection {
+  background-color: var(--primary-color);
+  color: var(--primary-text-color);
+}
+
 a {
   text-decoration: none;
 }
