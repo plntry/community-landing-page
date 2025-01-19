@@ -251,6 +251,7 @@ main {
 /* Hero */
 .hero {
   padding: 11.5rem 2rem 8rem;
+  position: relative;
 }
 
 .hero__content {
@@ -294,6 +295,134 @@ main {
 
 .hero__button:last-of-type:hover i {
   transform: translateX(5px);
+}
+
+/* Hero Star System */
+.hero__star-system {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  aspect-ratio: 1 / 1;
+  display: grid;
+  z-index: -1;
+}
+
+.hero__star {
+  aspect-ratio: 1 / 1;
+  border: var(--light-btn-border);
+  border-radius: 50%;
+  display: grid;
+  grid-area: 1 / 1;
+  place-self: center;
+  width: var(--diameter);
+  &::after {
+    /* Star Initiation */
+    animation: rotate var(--time, 3s) linear infinite;
+    aspect-ratio: 1 / 1;
+    background: var(--background);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    offset-path: content-box;
+    offset-distance: var(--offset-distance, 0%);
+    width: var(--width);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    offset-distance: var(--offset-distance, 0%);
+  }
+  25% {
+    offset-distance: calc(var(--offset-distance, 0%) + 25%);
+  }
+  50% {
+    offset-distance: calc(var(--offset-distance, 0%) + 50%);
+  }
+  75% {
+    offset-distance: calc(var(--offset-distance, 0%) + 75%);
+  }
+  100% {
+    offset-distance: calc(var(--offset-distance, 0%) + 100%);
+  }
+}
+
+/* Orbit 1 */
+.hero__orbit1 {
+  --diameter: 910px;
+  --time: 20000ms;
+}
+
+.hero__orbit1.hero__item1 {
+  --background: url(../images/orbits/orbit1/item1.png);
+  --width: 61px;
+  --offset-distance: -15%;
+}
+
+.hero__orbit1.hero__item2 {
+  --background: url(../images/orbits/orbit1/item2.png);
+  --width: 80px;
+  --offset-distance: 15%;
+}
+
+.hero__orbit1.hero__item3 {
+  --background: url(../images/orbits/orbit1/item3.png);
+  --width: 80px;
+  --offset-distance: 35%;
+}
+
+.hero__orbit1.hero__item4 {
+  --background: url(../images/orbits/orbit1/item4.png);
+  --width: 80px;
+  --offset-distance: 65%;
+}
+
+/* Orbit 2 */
+.hero__orbit2 {
+  --diameter: 1320px;
+  --time: 20000ms;
+  --width: 80px;
+}
+
+.hero__orbit2.hero__item1 {
+  --background: url(../images/orbits/orbit2/item1.png);
+  --offset-distance: 0%;
+}
+
+.hero__orbit2.hero__item2 {
+  --background: url(../images/orbits/orbit2/item2.png);
+  --offset-distance: 25%;
+}
+
+.hero__orbit2.hero__item3 {
+  --background: url(../images/orbits/orbit2/item3.png);
+  --offset-distance: 55%;
+}
+
+.hero__orbit2.hero__item4 {
+  --background: url(../images/orbits/orbit2/item4.png);
+  --offset-distance: -20%;
+}
+
+/* Orbit 3 */
+.hero__orbit3 {
+  --diameter: 1720px;
+  --time: 20000ms;
+  --width: 80px;
+}
+
+.hero__orbit3.hero__item1 {
+  --background: url(../images/orbits/orbit3/item1.png);
+  --offset-distance: 65%;
+}
+
+.hero__orbit3.hero__item2 {
+  --background: url(../images/orbits/orbit3/item2.png);
+  --offset-distance: 35%;
 }
 
 /* Features */
@@ -809,6 +938,43 @@ main {
   /* Hero */
   .hero {
     padding: 11.5rem 15px 8rem;
+  }
+
+  /* Hero Star System */
+  .hero__star-system {
+    top: -70%;
+  }
+
+  /* Orbit 1 */
+  .hero__orbit1 {
+    --diameter: 550px;
+  }
+
+  .hero__orbit1.hero__item1 {
+    --width: 32px;
+  }
+
+  .hero__orbit1.hero__item2 {
+    --width: 42px;
+  }
+
+  .hero__orbit1.hero__item3 {
+    --width: 42px;
+  }
+
+  .hero__orbit1.hero__item4 {
+    --width: 42px;
+  }
+
+  /* Orbit 2 */
+  .hero__orbit2 {
+    --diameter: 720px;
+    --width: 42px;
+  }
+
+  /* Orbit 3 */
+  .hero__orbit3 {
+    visibility: hidden;
   }
 
   /* Features */
