@@ -1,6 +1,7 @@
 # 🌏 Tian Landing Page
 
 Welcome to the **Tian Landing Page** project! This is a sleek and interactive landing page designed to introduce the concept of sharing resources and knowledge seamlessly. With an intuitive design and responsive layout, it ensures a dynamic user experience across all devices.
+
 ---
 
 ## 🎨 Figma Design
