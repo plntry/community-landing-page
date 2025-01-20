@@ -18,8 +18,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenu = document.querySelector(".navbar__mobile-menu-items");
 
   mobileMenuToggleBtn.addEventListener("click", function () {
-    console.log("test");
-
     mobileMenu.classList.toggle("navbar__mobile-menu-items--active");
   });
 });
